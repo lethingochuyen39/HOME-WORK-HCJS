@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+        }
+
+        .header {
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 50px;
+            font-weight: bolder;
+            text-shadow: 2px 1px 2px rgb(9, 9, 20);
+            color: rgb(207, 205, 205);
+
+        }
+
+        a {
+            padding-right: 2rem;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+
+        }
+
+        a:hover {
+            color: red;
+            font-size: 18px;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        div {
+            padding-top: .5rem;
+        }
+
+        .form {
+            display: inline-block;
+            width: 55%;
+            background-color: rgb(233, 231, 231);
+            margin-left: 5rem;
+            border: rgb(71, 71, 206) solid thin;
+        }
+
+        .mau {
+            color: white;
+            background-color: rgb(33, 8, 255);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            text-indent: 2rem;
+            color: red;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: red solid;
+
+        }
+
+        b {
+            color: red;
+        }
+        select{
+            width: 76px;
+        }
+        .mot{
+            text-indent: 1rem;
+            color: rgb(27, 172, 27);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="header">
+        <tr>
+
+            <img src="img/logo.jpg" alt="" width="150px" height="80px"> Amazing Bridges
+        </tr>
+    </p>
+
+    <table class="menu">
+        <tr>
+            <td> <a href="home.html">HOME</a></td>
+            <td> <a href="#">WORLD BRIDES</a></td>
+            <td> <a href="#">TOP LONGEST</a></td>
+            <td> <a href="#">TOP HIGHEST</a></td>
+            <td> <a href="">CONTACT</a></td>
+        </tr>
+    </table>
+
+
+    </table>
+
+
+    <hr>
+
+    <div class="form">
+        <form action="" onsubmit="return readData();">
+            <h2>Contact us</h2>
+            <p class="mot">
+                your Details:
+            </p>
+
+            <div>
+                <label for="">Name</label>
+                <input type="text" name="user" id="user" required><b>*</b>
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email" id="email" required><b>*</b>
+
+            </div>
+            <p class="mot">
+                Your Review:
+            </p>
+            <div>
+                <label for="">How did you hear about us?</label>
+                <select name="box" id="box">
+                    <option value="google">Google</option>
+                    <option value="friend">Friend</option>
+                    <option value="advert">Advert</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Would you visit again?</label>
+                <input type="radio" name="s1" id="s1" value="Yes" class="kt">Yes
+                <input type="radio" name="s1" id="s1" value="No" class="kt">No
+                <input type="radio" name="s1" id="s1" value="Maybe" class="kt">Maybe
+
+            </div>
+            <div>
+                <label for="">Comments:</label><br>
+                <textarea name="cm" id="cm" cols="37" rows="5"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="bx" id="bx" value="Sing me up for email updatas" class="abc" checked>Sing
+                me up for
+                email
+                updatas
+            </div>
+
+            <input class="mau" type="submit" value="Submit review">
+            <input class="mau" type="reset" value="Reset">
+
+        </form>
+    </div>
+
+    <script>
+        function readData() {
+
+            var a = [];
+            var user = document.getElementById("user").value;
+            var name = /^[A-Za-z ]{3,50}$/;
+            if (!name.test(user)) {
+                alert("Please enter your full name !");
+                return false;
+            }
+            a.push(`Name: ${user}`);
+
+            var mail = document.getElementById("email").value;
+            var checkmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!checkmail.test(mail)) {
+                alert("You entered the wrong Mail format !");
+                return false;
+            }
+            a.push(`Email: ${mail}`);
+
+            var hear = document.getElementById("box").value;
+            a.push(`I have heard : ${hear}`);
+
+            //lay input type co class 'mot'
+            var vs = document.getElementById("s1").value;
+            var check = document.getElementsByClassName("kt");
+            var visit = [];
+            for (let i = 0; check[i]; i++) {
+                if (check[i].checked) {
+                    visit.push(check[i].value);
+                }
+            }
+            a.push(`Visit: ${visit}`);
+
+            var comment = document.getElementById("cm").value;
+            a.push(`Comment: ${comment}`);
+
+            var chkElements = document.getElementsByClassName("abc");
+            var su = [];
+            for (let i = 0; chkElements[i]; i++) {
+                if (chkElements[i].checked) {
+                    su.push(chkElements[i].value);
+                }
+            }
+            a.push(`>>   ${su.join('')}`);
+
+            a.push("");
+            a.push("Regards!");
+
+            alert(a.join("\n"));
+        }
+
+    </script>
+
+
+
+
+
+    <div class="footer">
+        Copyright &copy; by ABC Team - April,2021
+
+    </div>
+
+</body>
+
+</html>
