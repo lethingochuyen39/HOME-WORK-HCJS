@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        *{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        img {
+            width: 100%;
+        }
+        .bon{
+            border: brown groove;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nam{
+           margin-top: 1rem;
+           margin-left: 15rem;
+            border-style: double;
+            border: black solid medium;
+            width:60%;
+            
+        }
+
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bolder;
+        }
+
+        a:hover {
+            font-size: large;
+            background-color: tomato;
+            border-radius: 5px;
+            color: black;
+        }
+        label {
+            display: inline-block;
+            margin-left: 1rem;
+            width: 10rem;
+        } 
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 20rem;
+        }
+        textarea,select,input{
+            margin: 0.2rem;
+        }
+        input:required {
+            border: red thin solid;
+        }
+
+        .ft1 {
+            display: inline-block;
+            border-radius: 20px;
+            color:white;
+            width: 100PX;
+            background-color: red;
+            margin-left: 1rem;
+        }
+        .ft2 {
+            display: inline-block;
+            border-radius: 20px;
+            width: 100PX;
+            color:white;
+            background-color: blue;
+        }
+        
+         td {
+            text-align: left;
+        }
+         tr:last-child td {
+            text-align: center;
+            padding: 0.3em;
+        }
+        th {
+            text-align: center;
+            background-color: rgb(0, 153, 0);
+            color: black;
+            font-weight: bolder;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <img src="image/hinh1.png" alt="">
+    <table class="bon" >
+        <tr>
+            <td><a href="home.html">HOME</a></td>
+            <td><a href="#">PRODUCTS</a></td>
+            <td><a href="#">SHOP</a></td>
+            <td><a href="register_pretest.html">REGISTER</a></td>
+            <td><a href="#">SIGNIN</a></td>
+    </table>
+    <form action="" onsubmit="return readData()">
+        <table class="nam">
+            <tr>
+                <th colspan="2">Member Information
+                   
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Full name</label>
+                </td>
+                <td>
+                    <input type="text" name="user" id="user" value="Allan" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Gender</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="male" class="mot" checked>Male
+                    <input type="radio" name="gender" id="gender" value="female" class="mot">Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Hobbies</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="c1" id="c1" value="Shopping" class="abc" checked>Shopping
+                    <input type="checkbox" name="c2" id="c2" value="Eating out" class="abc">Eating out
+                    <input type="checkbox" name="c3" id="c3" value="Sporting" class="abc"> Sporting
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Date of Birth</label>
+                </td>
+                <td>
+                    <input type="date" name="bd" id="bd" value="2000-10-02">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Address</label>
+                </td>
+                <td> <input type="text" name="ad" id="ad" value="124 Haminton" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" value=" Allan@gmail.com" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Phone Number</label>
+                </td>
+                <td>
+                    <input type="number" name="mb" id="mb" value="012345678" required>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">City</label>
+                </td>
+                <td>
+                    <select name="ct" id="ct">
+                        <option value="select">--Select--</option>
+                        <option value="Saigon">Saigon</option>
+                        <option value="Hue">Hue</option>
+                        <option value="Hanoi">Hanoi</option>
+                        <option value="Danang">Danang</option>
+
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Comment</label>
+                </td>
+                <td>
+                    <textarea name="cm" id="cm" cols="30" rows="5">
+            </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="ft1" type="submit" value="Submit">
+                    <input class="ft2" type="reset" value="Reset">
+                </td>
+            </tr>
+    </form>
+
+    <script>
+        //ham doc du lieu nhap tren form dang ky va xuat len man hinh
+        function readData() {
+
+            var a = [];
+
+            a.push("Member Information");
+            a.push("================");
+
+            //lay du lieu cua ten
+            var user = document.getElementById("user").value;
+            var name = /^[A-Za-z ]{3,30}$/;
+            if (!name.test(user)) {
+                alert("Please enter your full name !");
+                return false;
+            }
+            a.push(`Name: ${user}`);
+
+            //lay input type co class 'mot'
+            var gd = document.getElementById("gender").value;
+            var check = document.getElementsByClassName("mot");
+            var gender = [];
+            for (let i = 0; check[i]; i++) {
+                if (check[i].checked) {
+                    gender.push(check[i].value);
+                }
+            }
+            a.push(`Gender: ${gender}`);
+
+
+            //lay tat ca cac input type=checkbox co class 'abc'
+            var chkElements = document.getElementsByClassName("abc");
+            var hobbies = [];
+            for (let i = 0; chkElements[i]; i++) {
+                if (chkElements[i].checked) {
+                    hobbies.push(chkElements[i].value);
+                }
+            }
+            a.push(`Hobbies: ${hobbies.join(', ')}`);
+
+
+            var dob = document.getElementById("bd").value;
+            //tinh tuoi 
+            var d_dob = new Date(dob);
+            var d_today = new Date();
+            var age = d_today.getFullYear() - d_dob.getFullYear();
+            if (age < 17) {
+                alert("Member age must be 17-year old or above!");
+            }
+            a.push(`Birthday: ${dob}`);
+
+            //lay du lieu dia chi
+            var address = document.getElementById("ad").value;
+            a.push(`Address: ${address}`);
+
+            // lay du lieu email
+            var mail = document.getElementById("email").value;
+            var checkmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!checkmail.test(mail)) {
+                alert("You entered the wrong Mail format !");
+                return false;
+            }
+            a.push(`Email: ${mail}`);
+
+            //lay du lieu so dien thoai
+            var Phone_Number = document.getElementById("mb").value;
+            var checkphone = /\d{9,11}/;
+            if (!checkphone.test(Phone_Number)) {
+                alert("Please enter your full phone number!");
+                return false;
+            }
+            a.push(`Phone: ${Phone_Number}`);
+
+            //lay du lieu thanh pho
+            var city = document.getElementById("ct").value;
+            a.push(`City: ${city}`);
+
+            //lay du lieu comment
+            var comment = document.getElementById("cm").value;
+            a.push(`Comment: ${comment}`);
+
+            //doi du lieu thanh chuoi
+            alert(a.join("\n"));
+
+            //open new window-tab in browser
+            // var new_win = window.open();
+            //new_win.document.write("<pre>");
+            //new_win.document.writeln(a.join("\n"));
+            //new_win.document.write("</pre>");
+
+            return false; //vo hieu hoa chuc nang chuyen trang action cua nut submit
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
