@@ -1,0 +1,36 @@
+h5{
+    text-align: center;
+    letter-spacing: 0.1arem;
+    color: rgb(218, 201, 156);
+    font-family:'Courier New', Courier, monospace
+}
+
+h2{
+    text-align: center;
+}
+
+h6{
+
+    text-align: center;
+    color:darkgray;
+}
+hr { 
+    margin-left: 47%;
+    margin-right: 47%;
+    border-style:solid ;
+       
+}
+.hinh{
+    text-align: center;
+}
+a{
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+p{
+    text-indent: 1.8rem;
+}

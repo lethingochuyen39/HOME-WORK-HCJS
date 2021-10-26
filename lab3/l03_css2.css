@@ -1,0 +1,35 @@
+body{
+    background-color: #FAF0E6
+}
+
+h1{
+    font-family: monospace;
+    color: #DA70D6;
+}
+
+b{
+    color: red;
+}
+
+i{
+    color:#168100 ;
+}
+
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9ACD32;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+p:first-letter{
+color:#9932CC ;
+font-size: 1.4rem;
+font-family: 'Times New Roman', Times, serif;
+}
+
+li{color: #A52A2A;
+    font-family:Arial, Helvetica, sans-serif ;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 2rem 10rem 0rem 10rem;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: green;
+            font-size:30px;
+         
+        }
+
+        h3 {
+            color: tomato;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        input {
+
+            padding: 0.4rem;
+            display: inline-block;
+            background-color: rgb(182, 181, 181);
+            border: none;
+
+
+        }
+
+        label {
+
+            display: inline-block;
+            padding: 0 0 .7rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: rgb(20, 192, 97);
+        }
+
+        textarea {
+            width: 70%;
+            background-color: rgb(182, 181, 181);
+        }
+
+        input:only-child {
+            background-color: rgb(20, 192, 97);
+            color: white;
+            height: 40px;
+        }
+
+        .d {
+            background-color: rgb(226, 224, 224);
+            display: inline-block;
+
+        }
+        div:nth-child(n+1) {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+       div{
+           width: 100%;
+       }
+        
+    </style>
+</head>
+
+<body>
+    <h2>Sign Up</h2>
+    <div class="d">
+       
+        <form action="l08_homework.html">
+            <div>
+                <h3>Your basic info</h3>
+                <label for="">Name:</label> <br>
+                <input type="text" name="user" id="user" required><br><br>
+
+
+                <label for="">Email:</label><br>
+                <input type="text" name="email" id="email" required>
+                <br>
+
+                <label for="">Password:</label><br>
+                <input type="password" name="pass" id="pass" required>
+
+            </div><br>
+            <div>
+                <label for=""> Age:</label><br>
+                <input type="radio" name="gender" id="gender" value="under"> Under 18 <br>
+                <input type="radio" name="gender" id="gender" value="order"> 18 or older <br>
+            </div>
+
+            <div>
+                <h3>Your profile</h3>
+                <p>Biography:</p>
+
+                <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+            </div>
+            <div><br>
+                <label for="">Job Role:</label><br>
+                <select name="job" id="job">
+                    <optgroup label="Web">
+                        <option value="web">Web Designer</option>
+                        <option value="wordpress">WordPress Developer</option>
+                        <option value="front">Front-End Developer</option>
+                        <option value="php">PHP Developer</option>
+                        <option value="python">Python Developer</option>
+                        <option value="rails">Rails Developer</option>
+
+                    </optgroup>
+                    <optgroup label="Mobile">
+                        <option value="androild">Developer</option>
+                        <option value="ios">iOS Developer</option>
+                        <option value="mobile"> Mobile Designer</option>
+
+                    </optgroup>
+                    <optgroup label="Business">
+                        <option value="bnowner">Business Owner</option>
+                        <option value="fre">Freelancer</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="sec">Secretary</option>
+                        <option value="main"> Maintenace</option>
+                    </optgroup>
+                </select>
+
+            </div><br>
+            <div class="footer">
+                <input type="submit" value="Sign Up">
+
+            </div>
+    </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 8rem;
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>Sign up</h2>
+    <hr>
+    <form action="l08_login_welcome.html">
+        <div>
+            <label for="">Username</label> 
+            <input type="text" name="user" id="user" placeholder="nhap tai khoan" autofocus required><br><br>
+
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="pass" id="pass" required placeholder="nhap mat ma">
+
+        </div><br>
+
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email" id="email" placeholder="nhap email">
+
+        </div><br>
+        <div>
+            <label for="">Gender</label>
+            <input type="radio" name="gender" id="gender" value="male" checked>Male 
+            <input type="radio" name="gender" id="gender" value="female">Female
+        </div><br>
+        <div>
+            <label for="">Location</label>
+            <select name="loca" id="loca">
+                <option value="Sg">Saigon</option>
+                <option value="Hu">Hue</option>
+                <option value="Hn">Hanoi</option>
+                <option value="Ct">Cantho</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="">Birthday </label>
+            <input type="date" name="dob" id="dob" min="1990-01-31" max="2030-12-31" value="2000-10-02">
+        <div><br>
+            <label for="">Rating</label>
+            <input type="number" name="rate" id="rate" min="1" max="5" value="4">
+        </div><br>
+       <input type="submit" value="Submit">
+       <input type="reset" value="Reset">
+    </form>
+    
+</body>
+</html>
