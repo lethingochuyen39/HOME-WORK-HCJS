@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work</title>
+    <style>
+        body {
+            margin: 2rem 10rem 2rem 10rem;
+        }
+
+        .id {
+            display: inline-block;
+            width: 90%;
+            background-color: rgb(243, 248, 193);
+            padding: 2rem;
+        }
+
+        h2 {
+            color: rgb(8, 168, 8)
+        }
+
+        div {
+            text-align: center;
+
+        }
+       
+
+        input {
+            width: 250px;
+        }
+        
+        td:nth-last-child(){
+            text-align: left;
+        }
+        
+
+      
+    </style>
+</head>
+
+<body>
+    <span class="id">
+        <h2>Enter details of your account </h2>
+        <hr>
+        <form action="" name="home" id="home">
+            <div>
+                <table>
+                    <tr>
+                        <td> <label for="">First name </label></td>
+                        <td> <input type="text" name="ten" id="ten" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="">Last name </label></td>
+                        <td> <input type="text" name="ho" id="ho" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="">Email </label></td>
+                        <td> <input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="">Age </label></td>
+
+                        <td><input type="number" name="tuoi" id="tuoi" min="18" max="30"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="">Are you employed </label></td>
+                        <td> <input type="radio" name="emp" id="emp" value="Yes">Yes
+                            <input type="radio" name="emp" id="emp" value="No">No
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <input type="button" name="check" id="check" value="OK">
+            <input type="reset" value="Cancel">
+
+
+
+        </form>
+
+    </span>
+    <script>
+        document.getElementById("check").onclick = function () {
+            var Fname = document.getElementById("ten").value;
+            var Lname = document.getElementById("ho").value;
+            if (Fname != "Aptech" || Lname != "FPT") {
+                alert("Invalid account !");
+            }
+            else {
+                alert("congratulation message")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

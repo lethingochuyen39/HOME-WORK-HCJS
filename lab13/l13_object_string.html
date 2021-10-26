@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-String</title>
+</head>
+
+<body>
+    <script>
+        var fullname = new String("Mai Nguyen Thanh");
+
+        document.write("<pre>")
+            document.writeln("Student name : " + fullname+"<br>");
+            document.writeln("Number of characters are : "+ fullname.length);
+            document.writeln("Character at Position 12 is : "+ fullname.charAt(12));
+            document.writeln("Student\'s name and Father\'s name : "+fullname.split(" ",2));
+            document.writeln("Misle name is: "+fullname.substr(11));
+            document.writeln("Full name is "+ fullname.toUpperCase());
+
+
+        document.write("</pre>");
+    </script>
+</body>
+
+</html>

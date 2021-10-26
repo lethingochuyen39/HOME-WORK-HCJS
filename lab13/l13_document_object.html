@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="/HOMEWORK/MyWeb2/lab5/image/flower1big.jpg" width="50%"
+     alt="rose" id="myImg" litel="rose">
+     <div>
+         <label for="">Flower:</label>
+         <input id="mytext" value="Roses" readonly><br><br>
+
+
+         <input type="button" value="Change Image" onclick="change_image()">
+     </div>
+
+    <script>
+        function change_image(){
+            var imgtext= document.getElementById("myImg").alt;
+            if(imgtext=="rose"){
+                document.getElementById("myImg").src ="/HOMEWORK/MyWeb2/lab5/image/flower2big.jpg";
+                document.getElementById("myImg").alt= "sun";
+                document.getElementById("mytext").value="sunflowers";
+            }
+            else{
+                document.getElementById("myImg").src ="/HOMEWORK/MyWeb2/lab5/image/flower1big.jpg";
+                document.getElementById("myImg").alt= "rose";
+                document.getElementById("mytext").value="Roses";
+            }
+        }
+    </script>
+    
+</body>
+</html>

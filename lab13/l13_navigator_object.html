@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+    <style>
+        div{
+            background-color: rgb(41, 183, 202);
+        }
+    </style>
+</head>
+<body>
+    <script>
+          document.write("<pre>")
+            document.writeln("<h2> Navigator Object Demo </h2> <hr>");
+            document.writeln("<div>");
+            document.writeln("<b>Browser Information</b>");
+            document.writeln("Browser name : "+ navigator.appName);
+            document.writeln("Browser versison : "+ navigator.appVersion);
+            document.writeln("Browser language :"+ navigator.browserLanguage);
+            document.writeln("Platform : "+ navigator.platform);
+            if(navigator.cookieEnabled){
+                document.write("Cookie is enabled in the browser.");
+            }
+            document.writeln("</div>");
+
+
+        document.write("</pre>");
+    </script>
+    
+</body>
+</html>

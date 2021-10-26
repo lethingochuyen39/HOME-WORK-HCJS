@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <h2>Demo</h2>
+    <hr>
+    <form action="" name="formL" id="formL" onsubmit="checkLogin()">
+        <label for="">Username : </label><br>
+        <input type="text" name="user" id="user" required><br><br>
+
+        <label for="">Password :</label><br>
+        <input type="password" name="pass" id="pass" required><br><br>
+
+        <input type="submit" value="LOGIN">
+
+    </form>
+
+    <script>
+        function checkLogin(){
+            var uId= formL.user.value;
+            var pWd= formL.pass.value;
+            if(uId !="admin" || pWd !="123"){
+                alert("Login Failed !");
+            }
+            else{
+                alert("Login Successful !");
+            }
+        } 
+    </script>
+
+</body>
+
+</html>

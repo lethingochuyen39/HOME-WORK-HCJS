@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript </title>
+</head>
+
+<body>
+    <h2>Event style</h2>
+    <hr>
+    <form action="">
+        username :
+        <input type="text" name="user" id="user" required onfocus="showStyle(this)" onblur="hideStyle(this)"
+            placeholder="nhap email"><br><br>
+        password :
+        <input type="password" name="pass" id="pass" required onfocus="showStyle(this)" onblur="hideStyle(this)"
+            placeholder="nhap mat khau"><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+    <script>
+        function showStyle(obj) {
+            obj.style.backgroundColor = "#FFFFCC"
+        }
+        function hideStyle(obj) {
+            obj.style.backgroundColor = "#FFFFFF"
+        }
+    </script>
+</body>
+
+</html>
