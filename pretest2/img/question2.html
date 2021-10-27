@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question2</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        label {
+            float: right;
+            padding-top: 1rem;
+
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 250px;
+        }
+
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 150px;
+
+        }
+
+        input[type="submit"] {
+            width: 70px;
+            margin-left: 8rem;
+
+        }
+
+        input[type="reset"] {
+            width: 70px;
+
+
+        }
+
+        b {
+            color: red;
+        }
+        .abc td{
+
+
+        }
+        .abc {
+            width: 70%;
+            display: inline-block;
+            float: right;
+            padding-bottom: 2rem;
+
+        }
+
+        p {
+            color: blue;
+            font-weight: bold;
+            text-indent: 1.5rem;
+        }
+
+        h2 {
+            color: green;
+            text-align: center;
+        }
+
+        textarea {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>REGISTRATION FORM</h2><br>
+    <p>Notes:</p>
+    <ol>
+        <li>Fields with(<b>*</b>) mark must be entered</li>
+        <li>Login name have no spaces</li>
+    </ol>
+
+    <form action="" class="abc" onsubmit="return readData();">
+        <table>
+            <tr>
+                <td><label for="">Login name<b>*</b> </label></td>
+                <td><input type="text" name="user" id="user" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Password<b>*</b> </label></td>
+                <td> <input type="password" name="pass" id="pass" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Password Confirm<b>*</b> </label></td>
+                <td> <input type="password" name="pass1" id="pass1" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Full name<b>*</b> <label></td>
+                <td><input type="text" name="full" id="full" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Address<b>*</b> </label></td>
+                <td><input type="text" name="ad" id="ad"></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Email<b>*</b> </label></td>
+                <td><input type="email" name="email" id="email" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Sex </label></td>
+                <td><input type="radio" name="gn" id="gn" value="male" checked>Male
+                    <input type="radio" name="gn" id="gn" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Date of birth </label></td>
+                <td><input type="date" name="bd" id="bd" value="2000-10-02"></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Country </label></td>
+                <td>
+                    <select name="chon" id="chon">
+                        <option value="Ho Chi Minh city">Ho Chi Minh city</option>
+                        <option value="Ben tre">Ben tre</option>
+                    </select>
+                </td>
+            </tr> 
+            <tr>
+                <td><label for="">Phone number </label></td>
+                <td><input type="number" name="nb" id="nb"></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Hobbies </label></td>
+                <td><input type="checkbox" name="s1" id="s1" value="Swimming">Swimming
+                    <input type="checkbox" name="s2" id="s2" value="Dancing">Dancing
+                    <input type="checkbox" name="s3" id="s3" value="Shopping">Shopping
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Comment </label></td>
+                <td><textarea name="cm" id="cm" cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+    <script>
+        function readData() {
+            var a = [];
+
+
+
+            var name = document.getElementById("user").value;
+            var dd = /^[A-Za-z]{5}$/;
+            if (!dd.test(name)) {
+                alert("Please enter your  name !");
+                return false;
+            }
+
+            var mk = document.getElementById("pass").value;
+            var aa = /^[A-Za-z0-9]{5}$/;
+            if (!aa.test(mk)) {
+                alert("Please enter the correct password!");
+                return false;
+            }
+
+            var checkmk = document.getElementById("pass1").value;
+            if (mk != checkmk) {
+                alert("Wrong password !");
+            }
+
+            var Phone_Number = document.getElementById("nb").value;
+            var checkphone = /\d{9,11}/;
+            if (!checkphone.test(Phone_Number)) {
+                alert("Please enter your full phone number!");
+                return false;
+            }
+
+
+            a.push("Welcome to Education Web");
+            alert(a.join(""));
+            return false;
+
+
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
