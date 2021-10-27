@@ -62,6 +62,7 @@
         h2 {
             text-indent: 2rem;
             color: red;
+            text-shadow: 1px 1px 2px gray ;
         }
 
         input[type="text"],
@@ -81,10 +82,7 @@
             width: 76px;
         }
 
-        .mot {
-            text-indent: 1rem;
-            color: rgb(27, 172, 27);
-        }
+        
     </style>
 </head>
 
@@ -115,52 +113,58 @@
     <div class="form">
         <form action="" onsubmit="return readData();">
             <h2>Contact us</h2>
-            <p class="mot">
-                your Details:
-            </p>
+            <fieldset>
+                <legend>
+                    your Details:</legend>
 
-            <div>
-                <label for="">Name</label>
-                <input type="text" name="user" id="user" required><b>*</b>
-            </div>
-            <div>
-                <label for="">Email</label>
-                <input type="email" name="email" id="email" required><b>*</b>
 
-            </div>
-            <p class="mot">
-                Your Review:
-            </p>
-            <div>
-                <label for="">How did you hear about us?</label>
-                <select name="box" id="box">
-                    <option value="google">Google</option>
-                    <option value="friend">Friend</option>
-                    <option value="advert">Advert</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <label for="">Would you visit again?</label>
-                <input type="radio" name="s1" id="s1" value="Yes" class="kt">Yes
-                <input type="radio" name="s1" id="s1" value="No" class="kt">No
-                <input type="radio" name="s1" id="s1" value="Maybe" class="kt">Maybe
+                <div>
+                    <label for="">Name</label>
+                    <input type="text" name="user" id="user" required><b>*</b>
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" required><b>*</b>
 
-            </div>
-            <div>
-                <label for="">Comments:</label><br>
-                <textarea name="cm" id="cm" cols="37" rows="5"></textarea>
-            </div>
-            <div>
-                <input type="checkbox" name="bx" id="bx" value="Sign me up for email updatas" class="abc" checked>Sign
-                me up for
-                email
-                updatas
-            </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
 
-            <input class="mau" type="submit" value="Submit review">
-            <input class="mau" type="reset" value="Reset">
+                    Your Review:</legend>
 
+
+                <div>
+                    <label for="">How did you hear about us?</label>
+                    <select name="box" id="box">
+                        <option value="google">Google</option>
+                        <option value="friend">Friend</option>
+                        <option value="advert">Advert</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Would you visit again?</label>
+                    <input type="radio" name="s1" id="s1" value="Yes" class="kt">Yes
+                    <input type="radio" name="s1" id="s1" value="No" class="kt">No
+                    <input type="radio" name="s1" id="s1" value="Maybe" class="kt">Maybe
+
+                </div>
+                <div>
+                    <label for="">Comments:</label><br>
+                    <textarea name="cm" id="cm" cols="37" rows="5"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" name="bx" id="bx" value="Sign me up for email updatas" class="abc"
+                        checked>Sign
+                    me up for
+                    email
+                    updatas
+                </div>
+
+                <input class="mau" type="submit" value="Submit review">
+                <input class="mau" type="reset" value="Reset">
+            </fieldset>
         </form>
     </div>
 
