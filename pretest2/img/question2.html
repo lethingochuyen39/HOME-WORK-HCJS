@@ -14,7 +14,6 @@
         label {
             float: right;
             padding-top: 1rem;
-
         }
 
         input[type="text"],
@@ -22,6 +21,7 @@
         input[type="email"] {
             width: 250px;
         }
+
 
         input[type="number"],
         input[type="date"],
@@ -32,23 +32,19 @@
 
         input[type="submit"] {
             width: 70px;
-            margin-left: 8rem;
 
         }
 
         input[type="reset"] {
             width: 70px;
-
-
         }
 
         b {
             color: red;
         }
-        .abc td{
 
+        .abc td {}
 
-        }
         .abc {
             width: 70%;
             display: inline-block;
@@ -70,6 +66,41 @@
 
         textarea {
             width: 250px;
+            overflow-y: scroll;
+        }
+
+        td:first-child {
+            text-align: right;
+            padding-right: 1em;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            box-shadow: -1px -1px 1px gray;
+            border-top-width: 0.15em;
+            border-left-width: 0.15em;
+            border-bottom-width: thin;
+            border-right-width: thin;
+            border-color: rgba(128, 128, 128, 0.6);
+        }
+
+        tr:last-child td input:hover {
+            background-color:red;
+        }
+
+        tr:last-child td input {
+            background-color: rgb(51, 31, 230);
+            color: white;
+            box-shadow: none;
+        }
+
+        tr:last-child td {
+            padding-right: 7.1rem;
         }
     </style>
 </head>
@@ -133,7 +164,7 @@
                         <option value="Ben tre">Ben tre</option>
                     </select>
                 </td>
-            </tr> 
+            </tr>
             <tr>
                 <td><label for="">Phone number </label></td>
                 <td><input type="number" name="nb" id="nb"></td>
@@ -169,7 +200,7 @@
             var name = document.getElementById("user").value;
             var dd = /^[A-Za-z]{5}$/;
             if (!dd.test(name)) {
-                alert("Please enter your  name !");
+                alert("Invalid name!");
                 return false;
             }
 
@@ -183,6 +214,7 @@
             var checkmk = document.getElementById("pass1").value;
             if (mk != checkmk) {
                 alert("Wrong password !");
+                return false;
             }
 
             var Phone_Number = document.getElementById("nb").value;
