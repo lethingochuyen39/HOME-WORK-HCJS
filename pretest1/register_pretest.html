@@ -67,7 +67,7 @@
             color:white;
             width: 100PX;
             background-color: red;
-            margin-left: 1rem;
+            margin-left: 10rem;
         }
         .ft2 {
             display: inline-block;
@@ -92,6 +92,9 @@
             padding: 0.5rem;
             font-size: 1.5rem;
         }
+
+        
+       
         
         
     </style>
@@ -255,6 +258,7 @@
             var age = d_today.getFullYear() - d_dob.getFullYear();
             if (age < 17) {
                 alert("Member age must be 17-year old or above!");
+                return false;
             }
             a.push(`Birthday: ${dob}`);
 
