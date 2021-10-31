@@ -56,6 +56,9 @@
         select {
             width: 200px;
         }
+        .footer{
+             text-align: center;
+        }
     </style>
 </head>
 
@@ -99,7 +102,11 @@
         <p> <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </p>
+       
     </form>
+    <div class="footer">
+        2021 ABC School ALL rights reserved.
+    </div>
 
     <script>
         //ham doc du lieu nhap tren form dang ky va xuat len man hinh
@@ -111,7 +118,7 @@
           
             //lay du lieu cua ten
             var user = document.getElementById("ten").value;
-            var name = /^[A-Za-z ]{3,30}$/;
+            var name = /^[A-Za-z- ]{6,30}$/;
             if (!name.test(user)) {
                 alert("Please enter your full name !");
                 return false;

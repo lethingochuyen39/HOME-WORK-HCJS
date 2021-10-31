@@ -50,6 +50,8 @@
             background-color: rgb(233, 231, 231);
             margin-left: 5rem;
             border: rgb(71, 71, 206) solid thin;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
         }
 
         .mau {
@@ -173,7 +175,7 @@
 
             var a = [];
             var user = document.getElementById("user").value;
-            var name = /^[A-Za-z ]{3,50}$/;
+            var name = /^[A-Za-z- ]{3,50}$/;
             if (!name.test(user)) {
                 alert("Please enter your full name !");
                 return false;
@@ -221,9 +223,6 @@
         }
 
     </script>
-
-
-
 
 
     <div class="footer">
