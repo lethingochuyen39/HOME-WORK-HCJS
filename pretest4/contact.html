@@ -38,6 +38,8 @@
 
         .footer {
             text-align: center;
+            padding-bottom: 2rem;
+            font-weight: bold;
         }
 
         div {
@@ -52,6 +54,7 @@
             border: rgb(71, 71, 206) solid thin;
             padding-bottom: 2rem;
             margin-bottom: 2rem;
+            margin-top: 1rem;
         }
 
         .mau {
@@ -64,7 +67,7 @@
         h2 {
             text-indent: 2rem;
             color: red;
-            text-shadow: 1px 1px 2px gray ;
+            text-shadow: 1px 1px 2px gray;
         }
 
         input[type="text"],
@@ -84,7 +87,9 @@
             width: 76px;
         }
 
-        
+        fieldset {
+            margin-top: 1rem;
+        }
     </style>
 </head>
 
@@ -107,7 +112,7 @@
     </table>
 
 
-   
+
 
 
     <hr>
@@ -164,8 +169,10 @@
                     updatas
                 </div>
 
-                <input class="mau" type="submit" value="Submit review">
-                <input class="mau" type="reset" value="Reset">
+                <div>
+                    <input class="mau" type="submit" value="Submit review">
+                    <input class="mau" type="reset" value="Reset">
+                </div>
             </fieldset>
         </form>
     </div>
